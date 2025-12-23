@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <IsPackable>true</IsPackable>
+		<IsTestProject>false</IsTestProject>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AwesomeAssertions" Version="9.3.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageReference Include="Peeveen.CodeAnalysis" Version="*">
+	    <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="System.Text.Json" Version="10.0.1" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+  </ItemGroup>
+
+  <!-- NuGet package settings -->
+  <PropertyGroup>
+    <PackageIcon>packageIcon.png</PackageIcon>
+    <Description>Helper classes and functions for unit tests.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include=".nuget/packageIcon.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+</Project>
